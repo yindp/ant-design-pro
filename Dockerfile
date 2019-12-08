@@ -3,7 +3,7 @@ FROM circleci/node:latest-browsers
 WORKDIR /usr/src/app/
 USER root
 COPY package.json ./
-RUN yarn
+RUN yarn --registry http://registry.npm.taobao.org/
 
 COPY ./ ./
 
